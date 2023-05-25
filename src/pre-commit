@@ -6,7 +6,7 @@
 # If there was an older version, it's been renamed to "pre-commit--old".
 
 PATH=$PWD/node_modules/.bin:$PATH
-pre-commit.js
+pre-commit-process
 RESULT=$?
 [ $RESULT -ne 0 ] && exit 1
 exit 0

@@ -1,8 +1,8 @@
 {
   "name": "pre-commit.js",
-  "version": "0.0.0",
+  "version": "1.0.7",
   "bin": {
-    "pre-commit.js": "src/main.js"
+    "pre-commit-process": "src/main.js"
   },
   "description": "Install your custom pre-commit Node.js script",
   "keywords": [
@@ -24,10 +24,6 @@
   "license": "MIT",
   "author": "S. Mahdi Mir-Ismaili <s.m.mirismaili@gmail.com>",
   "type": "module",
-  "main": "src/main.js",
-  "exports": {
-    "./*": "./src/*"
-  },
   "files": [
     "src"
   ],
