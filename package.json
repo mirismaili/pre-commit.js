@@ -1,6 +1,9 @@
 {
   "name": "pre-commit.js",
   "version": "0.0.0",
+  "bin": {
+    "pre-commit.js": "src/main.js"
+  },
   "description": "Install your custom pre-commit Node.js script",
   "keywords": [
     "pre-commit",
@@ -32,7 +35,9 @@
     "patch-version": "npm version patch --no-git-tag-version",
     "increase-minor-version": "npm version minor --no-git-tag-version",
     "increase-major-version": "npm version major --no-git-tag-version",
-    "tag-this-version": "node -e \"require('child_process').execSync('git tag v' + require('./package.json').version)\""
+    "tag-this-version": "node -e \"require('child_process').execSync('git tag v' + require('./package.json').version)\"",
+    "postinstall": "node src/setup/copy-pre-commit.js",
+    "uninstall": "node src/setup/restore-pre-commit.js"
   },
   "dependencies": {},
   "devDependencies": {},
