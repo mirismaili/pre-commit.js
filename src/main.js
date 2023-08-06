@@ -26,7 +26,8 @@ const {stdout, stderr} = await exec(
 )
 if (stderr) console.error(stderr)
 
-const files = stdout.trimEnd().split('\n')
+const trimmedOutput = stdout.trimEnd()
+const files = trimmedOutput ? trimmedOutput.split('\n') : [] // Avoid `['']`
 
 if (!files.length) {
   console.info('No new/modified file to commit.')
