@@ -6,7 +6,7 @@
 import {copyFile, readFile, rename} from 'node:fs/promises'
 import {pathToFileURL} from 'node:url'
 
-if (JSON.parse(await readFile('package.json', 'utf-8')).name === 'eslint-pre-commit-hook') process.exit()
+if (JSON.parse(await readFile('package.json', 'utf-8')).name === 'pre-commit.js') process.exit()
 
 const {gitPreCommitPath, libPreCommitPath, oldPreCommitPath} = await import('./pre-commits-paths.js')
 

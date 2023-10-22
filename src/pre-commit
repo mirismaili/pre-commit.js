@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# This file is created by "eslint-pre-commit-hook" NPM library.
+# This file is created by "pre-commit.js" NPM library.
 # UNLESS YOU YOU'RE SURE WHAT YOU'RE DOING, DON'T EDIT THIS FILE MANUALLY!
 #
 # If there was an older version, it's been renamed to "pre-commit--old".
 
-PATH=$PWD/node_modules/.bin:$PATH
+# https://unix.stackexchange.com/a/684073/305931
+PATH=$PWD/node_modules/.bin:$PWD/../node_modules/.bin:$PWD/../../node_modules/.bin:$PWD/../../../node_modules/.bin:$PWD/../../../../node_modules/.bin:$PWD/../../../../../node_modules/.bin:$PATH
 pre-commit-process
 RESULT=$?
 [ $RESULT -ne 0 ] && exit 1
